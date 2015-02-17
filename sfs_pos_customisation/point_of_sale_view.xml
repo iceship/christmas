@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_pos_order_inherit" model="ir.ui.view">
+            <field name="name">pos.order.view.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="analytic_account_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                </xpath>
+                <xpath expr="//field[@name='shop_id']" position="attributes">
+                    <attribute name="on_change">onchange_shop_id(shop_id)</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_invoice']" position="after">
+                    <field name="amount_in_words" colspan="4"/>
+                    <field name="discount_amount" colspan="3"/>
+                    <field name="discount_percentage"/>
+                    <field name="with_invoice"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="vat" invisible="1"/>
+                    <field name="partner_address" invisible="1"/>
+                    <field name="company_address" invisible="1"/>
+                    <field name="warehouse_address" invisible="1"/>
+                    <field name="company_state" invisible="1"/>
+                    <field name="company_country" invisible="1"/>
+                    <field name="refund" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='refund']" position="replace">
+                    <button name="refund" string="Return Products" type="object" icon="gtk-ok"
+                                    attrs="{'invisible':['|', ('state','=','draft'), ('refund', '=', True)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                	<field name="frontname"/>
+                </xpath>
+                <xpath expr="//group" position="attributes">
+            		<attribute name="col">9</attribute>
+            	</xpath>
+            </field>
+        </record>
+        
+        <record id="view_pos_order_inherit_tree" model="ir.ui.view">
+            <field name="name">pos.order.view.inherit.tree</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='name']" position="after">
+                	<field name="frontname"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="shop_id"/>
+                </xpath>
+            </field>
+       </record>
+       
+       <record id="view_pos_order_inherit_search" model="ir.ui.view">
+            <field name="name">pos.order.view.inherit.search</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='State']" position="before">
+                    <filter string="Shop" icon="terp-personal" domain="[]" context="{'group_by':'shop_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(227.0,842.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="0.0" y1="0.0" width="227" height="800"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table9">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table9_new">
+      <blockAlignment value="CENTER"/>
+      <blockValign value="CENTER"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table4">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table5">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table6">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table7">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table8">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P2" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="P3" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="P8" fontName="Helvetica" fontSize="9.0" leading="11" alignment="CENTER" textColor="#000000"/>
+    <paraStyle name="P9" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P10" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="P11" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="P12" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="P14" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="P15" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="9.0" leading="11" alignment="JUSTIFY"/>
+    <paraStyle name="P16" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="P17" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="CENTER"/>
+    <paraStyle name="P18" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="P19" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="Standard" fontName="Helvetica"/>
+    <paraStyle name="Text body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Contents" fontName="Helvetica"/>
+    <paraStyle name="Table Heading" fontName="Helvetica" alignment="CENTER"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica"/>
+    <paraStyle name="Frame contents" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_Centre_9" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="9.0" leading="11" alignment="CENTER"/>
+    <paraStyle name="terp_default_8" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT"/>
+    <paraStyle name="terp_header_Centre" fontName="Courier-Bold" fontSize="12.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="terp_default_9b" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT"/>
+    <paraStyle name="terp_default_Right_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="terp_default_Bold_9_Right1" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="terp_default_Bold_9_Right2" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="RIGHT"/>
+    <paraStyle name="P4" fontName="Courier-Bold" fontSize="10.0" leading="13" alignment="CENTER"/>
+    <paraStyle name="P5" fontName="Courier-Bold" fontSize="10.0" leading="13" alignment="LEFT"/>
+    <paraStyle name="P7" fontName="Courier-Bold" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="P6a" fontName="Helvetica" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="P7a" fontName="Courier" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="P6" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="P13" fontName="Courier-Bold" fontSize="10.0" leading="13" alignment="RIGHT"/>
+    <paraStyle name="Table" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="P3">[[ repeatIn(objects,'o') ]]</para>
+    <blockTable colWidths="113.0,113.0" style="Table9">
+      <tr>
+        <td>
+          <para style="P10">[[ time.strftime(' %m/%d/%y%H:%M:%S%p') ]]</para>
+        </td>
+        <td>
+          <para style="P11">[[ o.name ]]</para>
+        </td>
+      </tr></blockTable>
+      
+      <blockTable style="Table9_new">
+      <tr><td>
+      <para style="terp_header_Centre">
+                [[setTag('para','image',{'width':'150','height':'100'}) ]] [[ o.company_id.logo]]</para>
+    </td></tr>
+    </blockTable>
+    <para style="P3">
+        <font color="white"> </font>
+    </para>
+    <para style="P15">[[ o.company_id and o.company_id.name or '' ]]</para>
+    <para style="P15">[[ o.company_address ]]</para>
+    <para style="P15">RFC : [[ o.company_id and o.company_id.vat ]]</para>
+    <para style="P15">Domicilio de emisión : [[ o.warehouse_address  or removeParentNode('para') ]]</para>
+    <para style="P15">Cajero : [[ o.create_uid and o.create_uid.name ]]</para>
+    <para style="P15">Tienda : [[ o.shop_id and o.shop_id.name or removeParentNode('para') ]]</para>
+    <para style="P15">Vendedor : [[ o.user_id and o.user_id.name or removeParentNode('para') ]]</para>
+    <para style="P15">Cliente : [[ o.partner_id and o.partner_id.name or removeParentNode('para') ]]</para>
+    <para style="P15">[[ o.partner_address and o.partner_address or removeParentNode('para') ]]</para>
+    <para style="P17">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="149.0,2.0,76.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P10">[[ repeatIn(o.lines,'line') ]]</para>
+          <para style="P12">[[ line.product_id.name ]]</para>
+        </td>
+        <td>
+          <para style="P14">[[o.state=='cancel' and o.statement_ids and '-' or '']][['%.f' % line.qty ]]</para>
+        </td>
+        <td>
+          <para style="P14">[[o.state=='cancel' and o.statement_ids and '-' or '']][[ '%.2f' % net(line.id) ]] [[company.currency_id.symbol]] <font face="Helvetica">[[ line and line.discount == 0.0 and removeParentNode('font') ]] ([[ '%.2f' % line.discount ]]%) [[company.currency_id.symbol]]</font></para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="151.0,76.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P18">IVA :</para>
+        </td>
+        <td>
+          <para style="P14">[[o.state=='cancel' and o.statement_ids and '-' or '']][['%.2f' % o.amount_tax]] [[company.currency_id.symbol]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P18">SubTotal :</para>
+        </td>
+        <td>
+          <para style="P14">[[ (o.amount_total and o.amount_total or 0.00)-(o.amount_tax and o.amount_tax or 0.00)]] [[company.currency_id.symbol]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P18">Discount :</para>
+        </td>
+        <td>
+          <para style="P14">[[ o.discount_amount and o.discount_amount or removeParentNode('tr')]] [[company.currency_id.symbol]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="151.0,76.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P19">Total con IVA :</para>
+        </td>
+        <td>
+          <para style="P16">[[(o.amount_total and o.amount_total or 0.00)-(o.discount_amount and o.discount_amount or 0.00)]] [[company.currency_id.symbol]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="227.0" style="Table4">
+      <tr>
+        <td>
+          <para style="P10">[[ o.amount_in_words ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="139.0,12.0,76.0" style="Table5">
+      <tr>
+        <td>
+          <para style="P10">[[ repeatIn(get_journal_amt(o),'d') ]]</para>
+          <para style="P9">[[ d['name'] + "(MXN)" ]]</para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P16">[[ '%.2f' %(d['amt'] or 0) ]] [[company.currency_id.symbol]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="138.0,13.0,76.0" style="Table6">
+      <tr>
+        <td>
+          <para style="P10">Cambio:</para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P16">[[ (o.amount_paid and o.amount_paid or 0.00)-((o.amount_total and o.amount_total or 0.00)-(o.discount_amount and o.discount_amount or 0.00)) ]] [[company.currency_id.symbol ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="227.0" style="Table7">
+      <tr>
+        <td>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="227.0" style="Table8">
+      <tr>
+        <td>
+          <para style="P8">**Este Ticket se pago en una sola exhibicion**</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+  </story>
+</document>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id="discount_product" model="product.product">
+            <field name="name">Discount</field>
+            <field name="default_code">Discount</field>
+            <field name="type">service</field>
+        </record>
+    </data>
+</openerp>

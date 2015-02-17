@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_sale_shop_form_inherit" model="ir.ui.view">
+            <field name="name">sale.shop.form.inherit</field>
+            <field name="model">sale.shop</field>
+            <field name="inherit_id" ref="sale.view_shop_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <newline/>
+                    <separator string="Sales Person" colspan="4"/>
+                    <field name="users_ids" colspan="4" nolabel="1"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="disc_product_id" invisible="1"/>
+                    <field name="default_partner_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

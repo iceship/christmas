@@ -1,0 +1,274 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sfs_pos_customization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1-20120808-233336\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-29 06:58+0000\n"
+"PO-Revision-Date: 2013-04-29 06:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Total Balance"
+msgstr "Total Balance"
+
+#. module: sfs_pos_customization
+#: sql_constraint:res.users:0
+msgid "You can not have two users with the same login !"
+msgstr "¡No puede tener dos usuarios con el mismo identificador de usuario!"
+
+#. module: sfs_pos_customization
+#: sql_constraint:res.currency:0
+msgid "The currency code must be unique per company!"
+msgstr "¡El código de moneda debe ser único por compañía!"
+
+#. module: sfs_pos_customization
+#: constraint:stock.move:0
+msgid "You must assign a production lot for this product"
+msgstr "Debe asignar un lote de producción para este producto"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_res_users
+msgid "res.users"
+msgstr "res.usuarios"
+
+#. module: sfs_pos_customization
+#: view:pos.order:0
+msgid "Return Products"
+msgstr "Devolución de productos"
+
+#. module: sfs_pos_customization
+#: sql_constraint:account.journal:0
+msgid "The name of the journal must be unique per company !"
+msgstr "¡El nombre del diaro debe ser único por compañía!"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Shop :"
+msgstr "Shop :"
+
+#. module: sfs_pos_customization
+#: constraint:res.users:0
+msgid "The chosen company is not in the allowed companies for this user"
+msgstr "La compañía seleccionada no está en las compañías permitidas para este usuario"
+
+#. module: sfs_pos_customization
+#: view:pos.report.wizard:0
+msgid "Print"
+msgstr "Print"
+
+#. module: sfs_pos_customization
+#: model:ir.actions.report.xml,name:sfs_pos_customization.pos_report
+#: report:pos.report:0
+#: view:pos.report.wizard:0
+msgid "Point Of Sale"
+msgstr "Detalle de Ventas"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_pos_order_line
+msgid "Lines of Point of Sale"
+msgstr "Líneas del Terminal Punto de Venta"
+
+#. module: sfs_pos_customization
+#: constraint:account.bank.statement.line:0
+msgid "The amount of the voucher must be the same amount as the one on the statement line"
+msgstr "El importe del recibo debe ser el mismo importe que el de la línea del extracto"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "User :"
+msgstr "User :"
+
+#. module: sfs_pos_customization
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product"
+msgstr "Está intentando asignar un lote que no es del mismo producto"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Ref"
+msgstr "Ref"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "0.00"
+msgstr "0.00"
+
+#. module: sfs_pos_customization
+#: field:account.bank.statement,curr_rate:0
+msgid "unknown"
+msgstr "unknown"
+
+#. module: sfs_pos_customization
+#: sql_constraint:account.journal:0
+msgid "The code of the journal must be unique per company !"
+msgstr "¡El código del diario debe ser único por compañía!"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_sale_shop
+msgid "Sales Shop"
+msgstr "Tiendas de venta"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Time :"
+msgstr "Time :"
+
+#. module: sfs_pos_customization
+#: model:ir.actions.act_window,name:sfs_pos_customization.action_pos_report_wizard
+msgid "Sale Details"
+msgstr "Corte de Caja"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Cash Incomings"
+msgstr "Cash Incomings"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_pos_report_wizard
+msgid "Wizard for POS report"
+msgstr "Wizard for POS report"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Total Amount :"
+msgstr "Total Amount :"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Total Amount Sales"
+msgstr "Total Amount Sales"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Name"
+msgstr "Name"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Cash Outflows"
+msgstr "Cash Outflows"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Total Amount Refund"
+msgstr "Total Amount Refund"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Amount"
+msgstr "Amount"
+
+#. module: sfs_pos_customization
+#: constraint:account.journal:0
+msgid "Configuration error! The currency chosen should be shared by the default accounts too."
+msgstr "¡Error de configuración! La moneda elegida debería ser también la misma en las cuentas por defecto"
+
+#. module: sfs_pos_customization
+#: view:sale.shop:0
+msgid "Sales Person"
+msgstr "Sales Person"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Notes :"
+msgstr "Notes :"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Date To :"
+msgstr "Date To :"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Total"
+msgstr "Total"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Línea extracto bancario"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Qty"
+msgstr "Qty"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_stock_move
+msgid "Stock Move"
+msgstr "Moviemiento de stock"
+
+#. module: sfs_pos_customization
+#: report:pos.report:0
+msgid "Date From :"
+msgstr "Date From :"
+
+#. module: sfs_pos_customization
+#: constraint:account.bank.statement:0
+msgid "The journal and period chosen have to belong to the same company."
+msgstr "El diario y periodo seleccionados tienen que pertenecer a la misma compañía"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "Extracto bancario"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_res_currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: sfs_pos_customization
+#: constraint:product.product:0
+msgid "Error: Invalid ean code"
+msgstr "Error: Código EAN no válido"
+
+#. module: sfs_pos_customization
+#: constraint:stock.move:0
+msgid "You can not move products from or to a location of the type view."
+msgstr "No puede mover productos desde o hacia una ubicación de tipo vista."
+
+#. module: sfs_pos_customization
+#: view:pos.report.wizard:0
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: sfs_pos_customization
+#: view:pos.report.wizard:0
+msgid "Users"
+msgstr "Users"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_pos_order
+msgid "Point of Sale"
+msgstr "Terminal Punto de Venta"
+
+#. module: sfs_pos_customization
+#: field:account.journal,curr_rate:0
+msgid "Currency Rate"
+msgstr "Currency Rate"
+
+#. module: sfs_pos_customization
+#: model:ir.model,name:sfs_pos_customization.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+

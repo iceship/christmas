@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1:
+-->
+<templates id="template" xml:space="preserve">
+<t t-name="AddToPos">
+    <br />
+    <table style="display:none;">
+        <tr>
+            <td class="paymentline-type">Discount Percentage:</td>
+            <td class="paymentline-amount pos-right-align">
+                <input id="discount-percentage" value="0" />
+            </td>
+        </tr>
+        <tr>
+            <td class="paymentline-type">Discount Amount:</td>
+            <td class="paymentline-amount pos-right-align">
+                <input id="discount-amount" value="0" />
+            </td>
+        </tr>
+        <tr>
+            <td class="paymentline-type">Net Total:</td>
+            <td class="paymentline-amount pos-right-align">
+                <span id="net-total"></span>
+            </td>
+        </tr>
+    </table>
+</t>
+<t t-name="AddToPosTicket">
+    <div class="pos-sale-ticket" style="font-family: Arial;font-size: 14px">
+        <table>
+        <tr>
+        <td>
+        <div class="pos-left-align"><t t-esc="new Date().toString(Date.CultureInfo.formatPatterns.shortDate + ' ' +
+            Date.CultureInfo.formatPatterns.longTime)"/></div>
+        </td>
+        <td>
+            <div class="pos-right-align">
+            <span id="name"></span>
+            </div>
+        </td>
+        </tr>
+        </table>
+        <br />
+        <div class="pos-center-align">
+            <img align="center" t-att-src="'data:image/gif;base64,'+ widget.company.logo" width="220" height="100"/>
+        </div>
+        <br />
+        <br />
+    <div  style="font-family: Arial;font-size: 12px; text-align:center;">
+        <t t-esc="widget.company.name"/><br />
+        <span id="vat"></span>
+        <span id="warehouse_address"></span>
+        <span id="name"></span>
+        Cajero: <span id="salesman_name"></span>
+        Tienda: <t t-esc="widget.shop_obj.name"/><br />
+        Cliente: <span id="partnerid"></span>
+        <span id="partner_address"></span>
+        <hr/>
+     </div>
+        <br />
+        <table>
+            <tr t-foreach="widget.currentOrderLines.toArray()" t-as="order">
+                <td class="pos-right-align">
+                   [<t t-esc="order.get('quantity').toFixed(0)"/>]
+                </td>
+                <td>
+                    <t t-esc="order.get('name')"/>
+                </td>
+                <td class="pos-right-align">
+                    <t t-esc="format_amount((order.get('price') * (1 - order.get('discount')/100) * order.get('quantity')).toFixed(2))"/>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+                <tr><td>Descuento:</td><td class="pos-right-align">
+                    <t t-if="currency.position == 'before'" t-esc="currency.symbol"/>
+                    <span id="discountamount"></span>
+                    <t t-if="currency.position == 'after'" t-esc="currency.symbol"/>
+                </td></tr>
+                <tr><td>Total:</td><td class="pos-right-align">
+                    <t t-if="currency.position == 'before'" t-esc="currency.symbol"/>
+                    <span id="netamount"></span>
+                    <t t-if="currency.position == 'after'" t-esc="currency.symbol"/>
+                </td></tr>
+                <tr><td colspan="2">
+                    <span id="amount_in_words"></span>
+                </td></tr>
+        </table>
+        <br />
+	<table>
+            <tr><td>Esta venta incluye <t t-esc="format_amount(widget.currentOrder.getTax().toFixed(2))"/> de IVA
+                    </td></tr>
+
+	</table>
+        <table>
+            <tr t-foreach="widget.currentPaymentLines.toArray()" t-as="pline">
+                <td>
+                    <t t-esc="pline.get('journal_id')[1]"/>
+                </td>
+                <td class="pos-right-align">
+                    <t t-esc="format_amount((pline.getAmount()).toFixed(2))"/>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr><td>Cambio:</td><td class="pos-right-align">
+                <t t-if="currency.position == 'before'" t-esc="currency.symbol"/>
+                <span id="payment-remaining_last"></span>
+                <t t-if="currency.position == 'after'" t-esc="currency.symbol"/>
+                </td></tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td>
+                <div align="center">
+                **Este Ticket se pago en una sola exhibicion**
+                </div>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td>
+                <div align="center">
+                <t t-esc="widget.company.rml_header1"/><br />
+                </div></td>
+            </tr>
+        </table>
+    </div>
+</t>
+
+<t t-name="sfs-pos-paymentline-template">
+        <tr><td class="paymentline-type">
+            <t t-esc="name"/>
+        </td>
+        <td class="paymentline-amount pl-amount pos-right-align">
+            <input type="text" t-att-value="amount.toFixed(2)" />
+            <a href='javascript:void(0)' class='delete-payment-line'><img src="/point_of_sale/static/src/img/search_reset.gif" /></a>
+        </td>
+        </tr>
+        <tr style="display:none;">
+        <td class="paymentline-type">
+            <t t-esc="conv_name"/>
+        </td>
+        <td class="paymentline-amount pl-conv-amount pos-right-align">
+            <input type="text" t-att-value="conv_amount.toFixed(2)" name="conv_amont_ele"/>
+        </td></tr>
+    </t>
+
+    <t t-name="sfs-pos-partner-template">
+        <div>
+            <table>
+                <tr>
+                    <td class="paymentline-type">Vendedor :</td>
+                    <td class="paymentline-amount pos-right-align">
+                        <select id="salesman" class="oe_forms"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="paymentline-type">Cliente :</td>
+                    <td class="paymentline-amount pos-right-align">
+                        <select id="partner" class="oe_forms"></select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </t>
+    
+    <t t-name="pos-partner-template">
+        <t t-esc="name"/>
+        <input type="hidden" t-att-value="id" />
+    </t>
+    
+    <t t-name="pos-salesman-template">
+        <t  t-esc="name"/>
+        <input type="hidden" t-att-value="id" />
+    </t>
+    
+    <t t-name="sfs-pos-product-template">
+        <a href="#">
+            <div class="product-img">
+                <img t-att-src="'data:image/gif;base64,'+ product_image_small" />
+                <span class="price-tag">
+                    <t t-esc="format_amount(price.toFixed(2))"/>
+                </span>
+            </div>
+            <div class="product-name">
+                <t t-esc="name"/>
+            </div>
+            <div class="product-qty">
+                [<t t-esc="qty_available"/>]
+            </div>
+        </a>
+    </t>
+    <t t-name="pos-orderline-template">
+        <td>
+            <t t-esc="name"/>
+        </td>
+        <td>
+            <t t-esc="format_amount(price.toFixed(2))"/>
+        </td>
+        <td>
+            <t t-esc="discount.toFixed(2)"/>
+        </td>
+        <td>
+            <t t-esc="quantity.toFixed(0)"/>
+        </td>
+        <td>
+            <t t-esc="format_amount((price * (1 - discount/100) * quantity).toFixed(2))"/>
+        </td>
+    </t>
+</templates>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <menuitem name="PoS Backend" id="point_of_sale.menu_point_root" sequence="20"
+            icon="terp-partner"
+            groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"
+            web_icon="images/pos.png"
+            web_icon_hover="images/pos-hover.png"/>
+        
+        <menuitem name="Daily Operations" id="point_of_sale.menu_point_of_sale" parent="point_of_sale.menu_point_root"
+            sequence="10" groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem name="Products" id="point_of_sale.menu_point_of_sale_product" parent="point_of_sale.menu_point_root" sequence="15"
+            groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem name="Reporting" parent="point_of_sale.menu_point_root" id="point_of_sale.menu_point_rep" sequence="20"
+            groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"/>
+        
+        <menuitem name="Cash Register Management" parent="point_of_sale.menu_point_root"
+            id="point_of_sale.menu_point_open_config" sequence="10" groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem action="point_of_sale.action_report_pos_order_all" id="point_of_sale.menu_report_pos_order_all"
+            parent="point_of_sale.menu_point_rep" sequence="3" groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem action="point_of_sale.action_report_cash_register_all" id="point_of_sale.menu_report_cash_register_all"
+            parent="point_of_sale.menu_point_rep" sequence="1" groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem icon="STOCK_PRINT" action="point_of_sale.action_report_pos_details"
+            id="point_of_sale.menu_pos_details" parent="point_of_sale.menu_point_rep" sequence="6"
+            groups="point_of_sale.group_pos_manager"/>
+        
+        <menuitem parent="point_of_sale.menu_point_rep" id="point_of_sale.menu_point_ofsale_all"
+            action="point_of_sale.action_pos_sale_all" sequence="1" groups="point_of_sale.group_pos_manager"/>
+        
+        <report
+            id="point_of_sale.pos_invoice_report"
+            string="Invoice"
+            model="pos.order"
+            name="pos.invoice"
+            auto="False"
+            multi="True"
+            rml="account/report/account_print_invoice.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_lines_detail"
+            string="Details of Sales"
+            model="pos.order"
+            name="pos.details"
+            auto="False"
+            multi="True"
+            menu="False"
+            rml="point_of_sale/report/pos_details.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_details_summary"
+            string="Sales (summary)"
+            model="pos.order"
+            name="pos.details_summary"
+            auto="False"
+            multi="True"
+            rml="point_of_sale/report/pos_details_summary.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_lines_report"
+            string="Pos Lines"
+            model="pos.order"
+            name="pos.lines"
+            auto="False"
+            multi="True"
+            rml="point_of_sale/report/pos_lines.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_sales_user"
+            string="Sales Report"
+            model="pos.order"
+            name="pos.sales.user"
+            auto="False"
+            multi="True"
+            menu="False"
+            rml="point_of_sale/report/pos_sales_user.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_sales_user_today"
+            string="Today's Sales"
+            model="pos.order"
+            name="pos.sales.user.today"
+            auto="False"
+            multi="True"
+            menu="False"
+            rml="point_of_sale/report/pos_sales_user_today.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+
+        <report
+            id="point_of_sale.pos_payment_report_user"
+            string="Today's Payment By User"
+            model="pos.order"
+            name="pos.payment.report.user"
+            auto="False"
+            multi="True"
+            menu="False"
+            rml="point_of_sale/report/pos_payment_report_user.rml"
+            groups="point_of_sale.group_pos_manager"
+             />
+         
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_pos_order_report_inherit_search" model="ir.ui.view">
+            <field name="name">pos.order.report.view.inherit.search</field>
+            <field name="model">report.pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_report_pos_order_search"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Product']" position="before">
+                    <filter string="Shop" icon="terp-personal" context="{'group_by':'shop_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

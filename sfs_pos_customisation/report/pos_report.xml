@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <report auto="False" id="pos_report" menu="False" model="pos.order" name="pos.report" rml="sfs_pos_customisation/report/pos_report.rml" string="Point Of Sale"/>
+    </data>
+</openerp>

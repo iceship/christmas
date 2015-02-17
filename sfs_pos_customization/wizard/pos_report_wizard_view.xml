@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_pos_report_form" model="ir.ui.view">
+            <field name="name">pos.repot.wizard</field>
+            <field name="model">pos.report.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Point Of Sale">
+                    <group colspan="4" col="2">
+                        <field name="from_date" required="1"/>
+                        <field name="to_date" required="1"/>
+                    </group>
+                    <separator string="Users" colspan="4"/>
+                    <field name="user_ids" colspan="4" nolabel="1"/>
+                    <group colspan="4" col="2">
+                        <button name="print_report" type="object" string="Print" icon="STOCK_PRINT"/>
+                        <button special="cancel" string="Cancel" icon="gtk-cancel"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_pos_report_wizard">
+            <field name="name">Sale Details</field>
+            <field name="res_model">pos.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem icon="STOCK_PRINT" action="action_pos_report_wizard"
+                id="point_of_sale.menu_pos_details" parent="point_of_sale.menu_point_rep" sequence="6" />
+    </data>
+</openerp>
